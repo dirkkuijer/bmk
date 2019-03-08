@@ -3,25 +3,43 @@
 
 * {
     font-family: 'Calibri', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
-   
-   
    }
+
+nav {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-content: space-between;
+  padding: 0;
+
+}
+
+nav td {
+    padding: 0;
+}
+
 
 ul {
     list-style: none;
-   
+   margin-left: 0;
 }
 
 .button {
+    display: flex;
+    justify-content: center;
+    width: 5rem;
     background-color: #2377AF;
     box-shadow: 3px 3px 3px black;
+    border-radius: 2px;
 }
 
 .button:hover {
-    background-color: rgb(195, 205, 211);
+    background-color: rgb(65, 53, 119);
     box-shadow: 3px 3px 3px black;
 }
 
 h3 {
+    background-color:  #2377AF;
+    color: white;
     text-align: center;
 }

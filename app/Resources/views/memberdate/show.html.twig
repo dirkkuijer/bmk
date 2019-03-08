@@ -3,6 +3,8 @@
 {% block body %}
     <h3>Leden</h3>
 
+        <a href="{{ path('lidBewerken_index') }}">Terug naar overzicht</a>
+  
     <table>
         <tbody>
             <tr>
@@ -37,15 +39,13 @@
     </table>
 
     <ul>
+       
         <li>
-            <a href="{{ path('lidBewerken_index') }}">Terug naar overzicht</a>
-        </li>
-        <li>
-            <a href="{{ path('lidBewerken_edit', { 'id': memberDate.id }) }}">Bewerken</a>
+            <a class="button" href="{{ path('lidBewerken_edit', { 'id': memberDate.id }) }}">Bewerken</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Verwijderen">
+                <input class="button" type="submit" value="Verwijderen">
             {{ form_end(delete_form) }}
         </li>
     </ul>
