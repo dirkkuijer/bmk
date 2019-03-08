@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h3>Lid bewerken</h3>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input class="button" type="submit" value="Bewerken" />
+    {{ form_end(edit_form) }}
+
+    <ul>
+        <li>
+           <a href="{{ path('lidBewerken_index') }}">Terug naar de lijst</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Verwijderen">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

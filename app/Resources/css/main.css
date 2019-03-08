@@ -1,0 +1,29 @@
+* {
+    font-family: 'Calibri', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
+   
+   
+   }
+
+tr:hover {
+    background-color: #2377AF;
+    
+}
+
+ul {
+    list-style: none;
+   list-style-type: none;
+}
+
+.button {
+    background-color: #2377AF;
+    box-shadow: 3px 3px 3px black;
+}
+
+.button:hover {
+    background-color: #2377AF;
+    box-shadow: 3px 3px 3px black;
+}
+
+h3 {
+    text-align: center;
+}

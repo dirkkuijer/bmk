@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h3>Leden</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Voornaam</th>
+                <th>Achternaam</th>
+                <th>Straat</th>
+                <th>Huisnummer</th>
+                <th>Toevoeging</th>
+                <th>Woonplaats</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for memberDate in memberDates %}
+            <tr>
+                <td><a href="{{ path('lidBewerken_show', { 'id': memberDate.id }) }}">{{ memberDate.id }}</a></td>
+                <td>{{ memberDate.voornaam }}</td>
+                <td>{{ memberDate.achternaam }}</td>
+                <td>{{ memberDate.straat }}</td>
+                <td>{{ memberDate.huisnummer }}</td>
+                <td>{{ memberDate.toevoeging }}</td>
+                <td>{{ memberDate.woonplaats }}</td>
+                <td>
+                    <ul>
+                        <li>
+
+                        <input type="button" class="button" href="{{ path('lidBewerken_show', { 'id': memberDate.id }) }}" value="show" />
+                     
+              
+                        </li>
+                        <li>
+                            <a href="{{ path('lidBewerken_edit', { 'id': memberDate.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('lidBewerken_new') }}">Nieuw lid aanmaken</a>
+        </li>
+    </ul>
+{% endblock %}

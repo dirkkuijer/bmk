@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h3>Leden</h3>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ memberDate.id }}</td>
+            </tr>
+            <tr>
+                <th>Voornaam</th>
+                <td>{{ memberDate.voornaam }}</td>
+            </tr>
+            <tr>
+                <th>Achternaam</th>
+                <td>{{ memberDate.achternaam }}</td>
+            </tr>
+            <tr>
+                <th>Straat</th>
+                <td>{{ memberDate.straat }}</td>
+            </tr>
+            <tr>
+                <th>Huisnummer</th>
+                <td>{{ memberDate.huisnummer }}</td>
+            </tr>
+            <tr>
+                <th>Toevoeging</th>
+                <td>{{ memberDate.toevoeging }}</td>
+            </tr>
+            <tr>
+                <th>Woonplaats</th>
+                <td>{{ memberDate.woonplaats }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('lidBewerken_index') }}">Terug naar overzicht</a>
+        </li>
+        <li>
+            <a href="{{ path('lidBewerken_edit', { 'id': memberDate.id }) }}">Bewerken</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Verwijderen">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
