@@ -1,0 +1,27 @@
+/* aanpassing van css het volgende in cmder runnen: php bin/console assetic:watch */
+
+
+* {
+    font-family: 'Calibri', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
+   
+   
+   }
+
+ul {
+    list-style: none;
+   
+}
+
+.button {
+    background-color: #2377AF;
+    box-shadow: 3px 3px 3px black;
+}
+
+.button:hover {
+    background-color: rgb(195, 205, 211);
+    box-shadow: 3px 3px 3px black;
+}
+
+h3 {
+    text-align: center;
+}

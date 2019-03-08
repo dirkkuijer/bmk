@@ -5,11 +5,15 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Baarns Mannenkoor{% endblock %}</title>
-        {% block stylesheets %}
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation-float.css"/> 
-        <link rel="stylesheet" href="{{ asset('css/main.css') }}"/>`
         
-        {% endblock %}
+        {% stylesheets filter='cssrewrite' output="css/main.css"
+            "%kernel.root_dir%/Resources/assets/css/main.css"        
+        %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+        
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
