@@ -38,15 +38,15 @@
         </tbody>
     </table>
 
-    <ul>
-       
-        <li>
-            <a class="button" href="{{ path('lidBewerken_edit', { 'id': memberDate.id }) }}">Bewerken</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input class="button" type="submit" value="Verwijderen">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+        <table>
+            <tr><td>
+                <a class="button" href="{{ path('lidBewerken_edit', { 'id': memberDate.id }) }}"
+                    style="float:right">Bewerken</a>
+            </td>
+            <td>
+                {{ form_start(delete_form) }}
+                    <input class="button" type="submit" value="Verwijderen" style="float:left">
+                {{ form_end(delete_form) }}
+            </td></tr>
+        </table>
 {% endblock %}

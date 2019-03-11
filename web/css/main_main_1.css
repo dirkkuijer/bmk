@@ -25,8 +25,10 @@ ul {
 }
 
 .button {
+    margin: 1 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: center;`
+    float: left;
     width: 5rem;
     background-color: #2377AF;
     box-shadow: 3px 3px 3px black;

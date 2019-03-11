@@ -5,14 +5,16 @@
 
           <a href="{{ path('lidBewerken_index') }}">Terug naar de lijst</a>
 
-    <div class="container-form">
+    <table>
+        <tr><td>
             {{ form_start(edit_form) }}
                 {{ form_widget(edit_form) }}
                 <input class="button" type="submit" value="Bewerken" />
             {{ form_end(edit_form) }}
-      
+        
             {{ form_start(delete_form) }}
-                <input class="button" type="submit" value="Verwijderen">
+                <input class="button" type="submit" value="Verwijderen" />
             {{ form_end(delete_form) }}
-    </div>
+        </tr>
+    </table>
 {% endblock %}
