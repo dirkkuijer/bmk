@@ -13,6 +13,7 @@
                 <th>Huisnummer</th>
                 <th>Toevoeging</th>
                 <th>Woonplaats</th>
+                <th>E<nobr>-mail</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -26,13 +27,12 @@
                 <td>{{ memberDate.huisnummer }}</td>
                 <td>{{ memberDate.toevoeging }}</td>
                 <td>{{ memberDate.woonplaats }}</td>
+                <td>{{ memberDate.email }}</td>
                 <td>
                     <ul>
                         <li>
                         <a class="button" href="{{ path('lidBewerken_show', { 'id': memberDate.id }) }}" >show</a>
-                        </li>
-                        <li>
-                            <a class="button" href="{{ path('lidBewerken_edit', { 'id': memberDate.id }) }}">edit</a>
+                        <a class="button" href="{{ path('lidBewerken_edit', { 'id': memberDate.id }) }}">edit</a>
                         </li>
                     </ul>
                 </td>

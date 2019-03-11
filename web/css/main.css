@@ -5,29 +5,10 @@
     font-family: 'Calibri', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
    }
 
-nav {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-content: space-between;
-  padding: 0;
-
-}
-
-nav td {
-    padding: 0;
-}
-
-
-ul {
-    list-style: none;
-   margin-left: 0;
-}
-
 .button {
-    margin: 1 2rem;
+    margin: 0.5rem 0.5rem;
     display: flex;
-    justify-content: center;`
+    justify-content: center;
     float: left;
     width: 5rem;
     background-color: #2377AF;
@@ -45,3 +26,29 @@ h3 {
     color: white;
     text-align: center;
 }
+
+nav {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-content: space-between;
+  padding: 0;
+
+}
+
+nav td {
+    padding: 0;
+}
+
+form {
+   margin-left: 3rem;
+   margin-right: 3rem;
+   
+}
+
+ul {
+    list-style: none;
+ 
+}
+
+

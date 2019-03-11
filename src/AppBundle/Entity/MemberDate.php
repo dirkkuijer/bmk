@@ -63,6 +63,13 @@ class MemberDate
      * @ORM\Column(name="woonplaats", type="string", length=100)
      */
     private $woonplaats;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=100)
+     */
+    private $email;
 
 
     /**
@@ -217,6 +224,30 @@ class MemberDate
     public function getWoonplaats()
     {
         return $this->woonplaats;
+    }
+
+     /**
+     * Set email
+     *
+     * @param string $email
+     *
+     * @return MemberDate
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
     }
 }
 

@@ -20,6 +20,7 @@ class MemberDateType extends AbstractType
             ->add('huisnummer')
             ->add('toevoeging')
             ->add('woonplaats')
+            ->add('email')
         ;
     }
     
