@@ -5,6 +5,9 @@
     font-family: 'Calibri', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
    }
 
+#appbundle_memberdate li {
+    color:red;
+}
 .button {
     margin: 0.5rem 0.5rem;
     display: flex;

@@ -3,6 +3,11 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+// Form validation
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Mapping\ClassMetadata;
+    
+    
 
 /**
  * MemberDate
@@ -22,59 +27,74 @@ class MemberDate
      */
     private $id;
 
+
+
+    TODO:::::   Ga verder kijken naar de voornaam en achternaam m.b.t. validatie voor nummers.
+                Vergeet ook niet te kijken naar het emailveld.
     /**
      * @var string
-     *
+     * @Assert\NotBlank(message="Vul het onderstaande veld in aub.")
+     * @Assert\Type(
+     *     type="string",
+     *     message="Cijfers zijn niet toegestaan. {{ type }}"
+     * )
      * @ORM\Column(name="voornaam", type="string", length=50)
      */
     private $voornaam;
 
     /**
      * @var string
-     *
+     *@Assert\NotBlank(message="Vul het onderstaande veld in aub.")
      * @ORM\Column(name="achternaam", type="string", length=50)
      */
     private $achternaam;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank(message="Vul het onderstaande veld in aub.")
+     * @Assert\Length(min=3, minMessage="Vul drie karakters of meer in alstublieft.")
      * @ORM\Column(name="straat", type="string", length=50)
      */
     private $straat;
 
     /**
      * @var int
-     *
+     * @Assert\NotBlank(message="Vul het onderstaande veld in aub.")
+     * @Assert\Type(
+     *     type="integer",
+     *     message="De waarde {{ value }} is geen geldig {{ type }}."
+     * )
      * @ORM\Column(name="huisnummer", type="integer")
      */
     private $huisnummer;
    
     /**
      * @var string
-     *
      * @ORM\Column(name="toevoeging", type="string", length=25, nullable=true)
      */
     private $toevoeging;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank(message="Vul het onderstaande veld in aub.")
      * @ORM\Column(name="woonplaats", type="string", length=100)
      */
     private $woonplaats;
     
     /**
      * @var string
-     *
-     * @ORM\Column(name="email", type="string", length=100)
+     * * @Assert\Email(
+     *     message = "The email '{{ value }}' is not a valid email.",
+     *     checkMX = true
+     * )
+     * @ORM\Column(name="email", type="string", length=100, nullable=false)
      */
     private $email;
 
 
     /**
      * Get id
-     *
+     * 
      * @return int
      */
     public function getId()
@@ -249,5 +269,7 @@ class MemberDate
     {
         return $this->email;
     }
+
+    
 }
 
