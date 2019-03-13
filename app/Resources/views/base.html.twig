@@ -7,7 +7,7 @@
         <title>{% block title %}Baarns Mannenkoor{% endblock %}</title>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation-float.css"/> 
-        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         {% stylesheets filter='cssrewrite' output="css/main.css"
             "%kernel.root_dir%/Resources/assets/css/main.css"        
         %}
@@ -25,9 +25,8 @@
         <table>
             <tr>
                 <td class="nav"><a href="#">Home</a></td>        
-                <td class="nav"><a href="#">Inloggen</a></td>
-                <td class="nav"><a href="#">Link</a></td>
-                <td class="nav"><a href="#">Link</a></td>
+                <td class="nav"><a href=" {{asset('login')}} ">Inloggen</a></td>
+                <td class="nav"><a href="#"><i class="fas fa-user-alt"></i></a></td>
             </tr>
         </table>
     </nav>
