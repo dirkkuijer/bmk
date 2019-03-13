@@ -29,8 +29,6 @@ class MemberDate
 
 
 
-    TODO:::::   Ga verder kijken naar de voornaam en achternaam m.b.t. validatie voor nummers.
-                Vergeet ook niet te kijken naar het emailveld.
     /**
      * @var string
      * @Assert\NotBlank(message="Vul het onderstaande veld in aub.")
@@ -44,7 +42,7 @@ class MemberDate
 
     /**
      * @var string
-     *@Assert\NotBlank(message="Vul het onderstaande veld in aub.")
+     * @Assert\NotBlank(message="Vul het onderstaande veld in aub.")
      * @ORM\Column(name="achternaam", type="string", length=50)
      */
     private $achternaam;
@@ -83,11 +81,13 @@ class MemberDate
     
     /**
      * @var string
-     * * @Assert\Email(
+     * @Assert\NotBlank(message="Vul het onderstaande veld in aub.")
+     *
+     *  @Assert\Email(
      *     message = "The email '{{ value }}' is not a valid email.",
      *     checkMX = true
      * )
-     * @ORM\Column(name="email", type="string", length=100, nullable=false)
+     * @ORM\Column(name="email", type="string", length=100)
      */
     private $email;
 

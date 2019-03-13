@@ -5,7 +5,7 @@
 
             <a href="{{ path('lidBewerken_index') }}">Terug naar overzicht</a>
     
-    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}}) }}
+    {{ form_start(form)}}
         {{ form_widget(form) }}
         <input class="button" type="submit" value="Aanmaken" />
     {{ form_end(form) }}
