@@ -10,7 +10,7 @@ class FirstController extends DefaultController
 {
         
     /**
-     * @Route ("/", name="index")
+     * @Route ("/", name="login")
      */
     public function naamWeergeven() 
     {

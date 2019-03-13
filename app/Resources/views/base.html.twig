@@ -25,8 +25,9 @@
         <table>
             <tr>
                 <td class="nav"><a href="#">Home</a></td>        
-                <td class="nav"><a href=" {{asset('login')}} ">Inloggen</a></td>
-                <td class="nav"><a href="#"><i class="fas fa-user-alt"></i></a></td>
+                <td class="nav"><a href="{{ path('login') }}">Inloggen</a></td>
+                <td class="nav"><a href="{{ path('register') }}">
+                Register <i class="fas fa-user-alt"></i></a></td>
             </tr>
         </table>
     </nav>

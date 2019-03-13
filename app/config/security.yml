@@ -6,8 +6,10 @@ security:
             algorithm: bcrypt
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
-        in_memory:
-            memory: ~
+        our_db_provider:
+            entity:
+                class: AppBundle:Users
+                property: username
             
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -27,6 +29,7 @@ security:
 
     access_control:
             - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+            - { path: ^/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
             - { path: ^/, roles: ROLE_ADMIN }
             # activate different ways to authenticate
 
