@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Users list</h1>
+    <h3>Gebruikers</h3>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Email</th>
+                <th>E-mail</th>
                 <th>Username</th>
                 <th>Password</th>
                 <th>Roles</th>
@@ -39,7 +39,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('register_new') }}">Create a new user</a>
+            <a href="{{ path('register_new') }}">Nieuwe gebruiker</a>
         </li>
     </ul>
 {% endblock %}

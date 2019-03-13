@@ -23,19 +23,19 @@ class Users implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255, unique=true)
-     * @Assert\NotBlank
+     * @Assert\NotBlank(message="Vul het onderstaande veld in aub.")
      * @Assert\Email
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255, unique=true)
-     * @Assert\NotBlank
+     * @Assert\NotBlank(message="Vul het onderstaande veld in aub.")
      */
     private $username;
 
     /**
-     * @Assert\NotBlank
+     * @Assert\NotBlank(message="Vul het onderstaande veld in aub.")
      * @Assert\Length(max=4096)
      */
     private $plainPassword;
@@ -43,7 +43,7 @@ class Users implements UserInterface
     /**
      * The below length depends on the "algorithm" you use for encoding
      * the password, but this works well with bcrypt.
-     *
+     *@Assert\NotBlank(message="Vul het onderstaande veld in aub.")
      * @ORM\Column(type="string", length=64)
      */
     private $password;

@@ -1,8 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>User</h1>
+    <h3>Gebruiker</h3>
 
+ <a href="{{ path('register_index') }}">Terug naar overzicht</a>
+ 
     <table>
         <tbody>
             <tr>
@@ -10,7 +12,7 @@
                 <td>{{ user.id }}</td>
             </tr>
             <tr>
-                <th>Email</th>
+                <th>E-mail</th>
                 <td>{{ user.email }}</td>
             </tr>
             <tr>
@@ -30,14 +32,14 @@
 
     <ul>
         <li>
-            <a href="{{ path('register_index') }}">Back to the list</a>
+           
         </li>
         <li>
             <a href="{{ path('register_edit', { 'id': user.id }) }}">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input class="button" type="submit" value="Delete">
             {{ form_end(delete_form) }}
         </li>
     </ul>

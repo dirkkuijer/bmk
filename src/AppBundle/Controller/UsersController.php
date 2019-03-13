@@ -17,7 +17,7 @@ class UsersController extends Controller
     /**
      * Lists all user entities.
      *
-     * @Route("/", name="register")
+     * @Route("/", name="register_index")
      * @Method("GET")
      */
     public function indexAction()
@@ -39,7 +39,7 @@ class UsersController extends Controller
      */
     public function newAction(Request $request)
     {
-        $user = new User();
+        $user = new Users();
         $form = $this->createForm('AppBundle\Form\UsersType', $user);
         $form->handleRequest($request);
 

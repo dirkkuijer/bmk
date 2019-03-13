@@ -1,16 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>User creation</h1>
+    <h3>Gebruiker aanmaken</h3>
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
-
-    <ul>
+<ul>
         <li>
-            <a href="{{ path('register_index') }}">Back to the list</a>
+            <a href="{{ path('register_index') }}">Terug naar overzicht</a>
         </li>
     </ul>
+    
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input class="button" type="submit" value="Aanmaken" />
+    {{ form_end(form) }}
+
+    
 {% endblock %}
